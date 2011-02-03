@@ -1,4 +1,7 @@
 class BooksController < ApplicationController
+
+  before_filter :login_required
+  
   def index
     @books = Book.all
   end
