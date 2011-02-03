@@ -1,0 +1,8 @@
+<p>
+	<b><%= pluralize(@author.books.size, 'Book') %></b><br />
+	<ul>
+		<% for book in @author.books  %>
+			<li><%= link_to(book.title) %></li>
+		<% end  %>
+	</ul>
+</p>
