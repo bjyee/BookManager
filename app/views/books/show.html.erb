@@ -10,7 +10,11 @@
 </p>
 <p>
   <strong>Publisher:</strong>
-  <%= @book.publisher_id %>
+  <%= @book.publisher.name %>
+</p>
+
+<p>
+<%= render :partial => 'list_of_authors' %>
 </p>
 
 <p>
@@ -18,3 +22,4 @@
   <%= link_to "Destroy", @book, :confirm => 'Are you sure?', :method => :delete %> |
   <%= link_to "View All", books_path %>
 </p>
+

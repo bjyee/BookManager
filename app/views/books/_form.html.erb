@@ -10,7 +10,8 @@
   </p>
   <p>
     <%= f.label :publisher_id %><br />
-    <%= f.text_field :publisher_id %>
+	<%= f.collection_select :publisher_id, Publisher.all, :id, :name %>
   </p>
+  <p><%= render :partial => 'authors_checkboxes' %></p>
   <p><%= f.submit %></p>
 <% end %>
